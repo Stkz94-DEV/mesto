@@ -74,6 +74,25 @@
       &copy; <span class="footer__year" id="currentYear"></span>. Сергей Цепилов
     </p>
   </footer>
+  <div class="popup">
+    <div class="popup__container">
+      <h3 class="popup__title">Редактировать профиль</h3>
+      <form class="popup__form" name="formEdit">
+        <label class="popup__label">
+          <input class="popup__input popup__input_type_name" name="popupName" type="text" placeholder="Введите имя">
+          <span class="popup__input-err"></span>
+        </label>
+        <label class="popup__label">
+          <input class="popup__input popup__input_type_description" name="popupDescription" type="text" placeholder="Введите описание">
+          <span class="popup__input-err"></span>
+        </label>
+        <button class="popup__submit-btn" type="submit">
+          Сохранить
+        </button>
+      </form>
+      <button class="popup__close-btn" type="button"></button>
+    </div>
+  </div>
   <script src="./scripts/index.js"></script>
 </body>
 </html>
