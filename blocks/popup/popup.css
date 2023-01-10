@@ -6,6 +6,9 @@
 @import url("./__input-err/popup__input-err.css");
 @import url("./__submit-btn/popup__submit-btn.css");
 @import url("./__close-btn/popup__close-btn.css");
+@import url("./__container-img/popup__container-img.css");
+@import url("./__fulled-img/popup__fulled-img.css");
+@import url("./__title-img/popup__title-img.css");
 
 .popup {
   width: 100%;
@@ -16,6 +19,9 @@
   left: 0;
   align-items: center;
   justify-content: center;
-  display: none;
+  display: flex;
   z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s linear, opacity 0.2s linear;
 }
