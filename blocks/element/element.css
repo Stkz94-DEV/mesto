@@ -2,8 +2,11 @@
 @import url("./__description/element__description.css");
 @import url("./__title/element__title.css");
 @import url("./__like/element__like.css");
+@import url("./__trash/element__trash.css");
+@import url("./__like/element__like_active.css");
 
 .element {
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
