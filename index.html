@@ -24,48 +24,6 @@
 
     <div class="elements">
       <ul class="elements__list">
-        <li class="element">
-          <img class="element__img" src="./images/element-arkhyz.jpg" alt="Архыз">
-          <article class="element__description">
-            <h2 class="element__title">Архыз</h2>
-            <button class="element__like" type="button"></button>
-          </article>
-        </li>
-        <li class="element">
-          <img class="element__img" src="./images/element-chelyabinsk-oblast.jpg" alt="Челябинская область">
-          <article class="element__description">
-            <h2 class="element__title">Челябинская область</h2>
-            <button class="element__like" type="button"></button>
-          </article>
-        </li>
-        <li class="element">
-          <img class="element__img" src="./images/element-ivanovo.jpg" alt="Иваново">
-          <article class="element__description">
-            <h2 class="element__title">Иваново</h2>
-            <button class="element__like" type="button"></button>
-          </article>
-        </li>
-        <li class="element">
-          <img class="element__img" src="./images/element-kamchatka.jpg" alt="Камчатка">
-          <article class="element__description">
-            <h2 class="element__title">Камчатка</h2>
-            <button class="element__like" type="button"></button>
-          </article>
-        </li>
-        <li class="element">
-          <img class="element__img" src="./images/element-kholmogorsky-rayon.jpg" alt="Холмогорский район">
-          <article class="element__description">
-            <h2 class="element__title">Холмогорский район</h2>
-            <button class="element__like" type="button"></button>
-          </article>
-        </li>
-        <li class="element">
-          <img class="element__img" src="./images/element-baikal.jpg" alt="Байкал">
-          <article class="element__description">
-            <h2 class="element__title">Байкал</h2>
-            <button class="element__like" type="button"></button>
-          </article>
-        </li>
       </ul>
     </div>
   </main>
@@ -74,10 +32,10 @@
       &copy; <span class="footer__year" id="currentYear"></span> Сергей Цепилов
     </p>
   </footer>
-  <div class="popup">
+  <div class="popup popup-edit">
     <div class="popup__container">
       <h3 class="popup__title">Редактировать профиль</h3>
-      <form class="popup__form" name="formEdit">
+      <form class="popup__form popup__form-edit" name="formEdit">
         <label class="popup__label">
           <input class="popup__input popup__input_type_name" name="popupName" type="text" placeholder="Введите имя">
           <span class="popup__input-err"></span>
@@ -93,6 +51,42 @@
       <button class="popup__close-btn" type="button"></button>
     </div>
   </div>
+  <div class="popup popup-add">
+    <div class="popup__container">
+      <h3 class="popup__title">Новое место</h3>
+      <form class="popup__form popup__form-add" name="formAdd">
+        <label class="popup__label">
+          <input class="popup__input popup__input_type_title" name="popupTitle" type="text" placeholder="Название">
+          <span class="popup__input-err"></span>
+        </label>
+        <label class="popup__label">
+          <input class="popup__input popup__input_type_link" name="popupLink" type="text" placeholder="Ссылка на картинку">
+          <span class="popup__input-err"></span>
+        </label>
+        <button class="popup__submit-btn" type="submit">
+          Создать
+        </button>
+      </form>
+      <button class="popup__close-btn" type="button"></button>
+    </div>
+  </div>
+  <div class="popup popup-img">
+    <div class="popup__container-img">
+      <img class="popup__fulled-img" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg" alt="Картинка места">
+      <h3 class="popup__title-img">Архыз</h3>
+      <button class="popup__close-btn" type="button"></button>
+    </div>
+  </div>
+  <template id="element-template">
+    <li class="element">
+      <button class="element__trash" type="button"></button>
+      <img class="element__img" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg" alt="Картинка места">
+      <article class="element__description">
+        <h2 class="element__title"></h2>
+        <button class="element__like" type="button"></button>
+      </article>
+    </li>
+  </template>
   <script src="./scripts/index.js"></script>
 </body>
 </html>
